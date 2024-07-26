@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página Web</title>
+</head>
+<body>
+    <!-- Aquí empieza el código del buscador de coches -->
+    <input type="hidden" id="cfg_contract" value="26043" />
+    <input type="hidden" id="cfg_box_title" value="Hersi Motors" />
+    <input type="hidden" id="cfg_box_type" value="0" />
+    <input type="hidden" id="cfg_box" value="true" />
+    <input type="hidden" id="cfg_maxRows" value="25" />
+    <input type="hidden" id="cfg_channel" value="default" />
+    <script type="text/javascript" src="https://publicaciones.carfactory.es/scripts/channels.js"></script>
+    <div style="width:850px">
+        <iframe id="iframe_carfactory" width="830" height="591" frameborder="0"></iframe>
+        <script type="text/javascript">
+            // Espera a que el documento esté completamente cargado antes de llamar a LoadCarfactory
+            document.addEventListener('DOMContentLoaded', function() {
+                if (typeof LoadCarfactory === 'function') {
+                    LoadCarfactory();
+                } else {
+                    console.error('Function LoadCarfactory is not defined');
+                }
+            });
+        </script>
+    </div>
+    <!-- Aquí termina el código del buscador de coches -->
+</body>
+</html>
